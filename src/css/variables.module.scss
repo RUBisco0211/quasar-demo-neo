@@ -1,0 +1,12 @@
+@import 'src/css/quasar.variables.scss';
+:export {
+  primary: $primary;
+  secondary: $secondary;
+  accent: $accent;
+  dark: $dark;
+  dark-page: $dark-page;
+  positive: $positive;
+  negative: $negative;
+  info: $info;
+  warning: $warning;
+}

@@ -1,0 +1,187 @@
+// app global css in SCSS form
+@import 'src/css/nunito_sans.scss';
+@import 'src/css/hljs_theme.scss';
+@import 'src/css/variables.module.scss';
+body {
+    overflow: hidden;
+    font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+// 菜单项圆角
+.dense-menu-item {
+    border-radius: 10px 10px 10px 10px;
+}
+
+// 图表高度
+.small-chart {
+    height: 150px;
+}
+.chart {
+    height: 300px;
+}
+
+// highlight.js 调整和字体设置
+pre {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+pre > code {
+    font-family: 'Cascadia Code', '微软雅黑', 'Consolas', monospace;
+    font-size: 16px;
+}
+
+.my-sticky-header-column-table {
+    overflow: hidden;
+    tr th {
+        position: sticky;
+        /* higher than z-index for td below */
+        z-index: 2;
+        /* bg color is important; just specify one */
+    }
+
+    /* this will be the loading indicator */
+    thead tr:last-child th {
+        /* height of all previous header rows */
+        top: 48px;
+        /* highest z-index */
+        z-index: 3;
+    }
+    thead tr:first-child th {
+        top: 0;
+        z-index: 1;
+    }
+    tr:first-child th:first-child {
+        /* highest z-index */
+        z-index: 3;
+    }
+    td:first-child {
+        z-index: 1;
+    }
+
+    td:first-child,
+    th:first-child {
+        position: sticky;
+        left: 0;
+    }
+    th:last-child,
+    td:last-child {
+        position: sticky;
+        right: 0;
+    }
+}
+
+.bg-dark-page {
+    background-color: $dark-page;
+}
+
+// 段落自动换行
+.word-wrap {
+    word-break: break-word;
+}
+.bg-dark-active {
+    background-color: $dark-active;
+}
+
+.card-active:hover {
+    transform: scale(1.01);
+    box-shadow: 0 2px 100px 10px rgba(0, 0, 0, 0.1) !important;
+}
+.q-card--flat {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px;
+}
+.q-table--flat {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px;
+}
+.q-card--flat > .q-list {
+    .q-item:first-child {
+        border-radius: 10px 10px 0 0 !important;
+    }
+    .q-item:last-child {
+        border-radius: 0 0 10px 10px !important;
+    }
+    .q-expansion-item:first-child {
+        border-radius: 10px 10px 0 0 !important;
+    }
+    .q-expansion-item:last-child {
+        border-radius: 0 0 10px 10px !important;
+    }
+}
+
+.q-btn--rectangle {
+    border-radius: 10px !important;
+}
+.q-btn--rectangle:active {
+    transform: scale(0.95);
+}
+.q-btn-dropdown {
+    .q-btn--rectangle:first-child {
+        border-radius: 10px 0 0 10px !important;
+        box-shadow: none !important;
+    }
+    .q-btn--rectangle:last-child {
+        border-radius: 0 10px 10px 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+.rounded-borders {
+    border-radius: 10px !important;
+}
+
+.q-menu {
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2) !important;
+}
+.header-shadow {
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1) !important;
+}
+.q-field--outlined {
+    .q-field__control {
+        border-radius: 10px !important;
+    }
+}
+.q-uploader {
+    border-radius: 10px !important;
+}
+.q-dialog-plugin.q-card {
+    border-radius: 10px !important;
+}
+.q-notification {
+    border-radius: 10px !important;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.q-message-text--received {
+    border-radius: 10px 10px 10px 0px;
+}
+.q-message-text--sent {
+    border-radius: 10px 10px 0px 10px;
+}
+
+div.github-markdown-body {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+
+    ::selection {
+        background-color: $primary;
+        color: #fff;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+    img {
+        max-height: 200px;
+        border-radius: 10px;
+    }
+}
+.q-tooltip--style {
+    background-color: $dark-active;
+    font-size: 13px;
+}

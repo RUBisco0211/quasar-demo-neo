@@ -1,0 +1,1 @@
+import{bI as n}from"./index.93b2c2bb.js";async function i(a,t=!0){await a.addInteractor("externalPause",async e=>{const{Pauser:r}=await n(()=>import("./Pauser.269cf6c9.js"),["assets/Pauser.269cf6c9.js","assets/ExternalInteractorBase.0b0fb1e9.js"]);return new r(e)},t)}export{i as loadExternalPauseInteraction};
