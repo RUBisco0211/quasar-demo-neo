@@ -1,0 +1,1 @@
+import{bI as t}from"./index.93b2c2bb.js";async function i(a,e=!0){const{SquareDrawer:r}=await t(()=>import("./SquareDrawer.ad6d3b3a.js"),[]);await a.addShape(["edge","square"],new r,e)}export{i as loadSquareShape};
